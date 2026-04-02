@@ -1,0 +1,152 @@
+:root {
+  --primary-color :rgb(185, 185, 209);
+  --secondary-color: rgb(102, 102, 146);
+  --weak-color: rgb(185, 16, 44);
+  --medium-color: orange;
+  --strong-color: green;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-transform: capitalize;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+.container {
+  width: 400px;
+  background-color: rgb(194, 190, 190);
+  border-radius: 20px;
+  padding: 20px;
+}
+.underline {
+  width: 150px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+  height: 3px;
+  background-color: black;
+  margin-top: -24px;
+}
+.input-copy-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.copy-btn {
+  width: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 9px;
+  border-radius: 19px;
+  cursor: pointer;
+  background-color: rgb(211, 211, 211);
+}
+.copy-btn:hover {
+  background-color: var(--primary-color);
+}
+.password-length-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.password-length-num {
+  background-color: rgb(236, 236, 236);
+  padding: 3px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.password-rules {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 12px  rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+.input {
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.input-copy-container {
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+   border-radius: 7px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+   margin-bottom: 30px;
+}
+.generate-btn {
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  margin-left: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  border: none;
+  background-color: var(--secondary-color);
+}
+.generate-btn:active{
+  background-color:rgb(92, 84, 92);
+}
+.each-include {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.includes label {
+  font-size: 16px;
+}
+input[type="range"] {
+  accent-color: var(--secondary-color);
+  height: 5px;
+  cursor:pointer; 
+  flex: 1;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--secondary-color);
+  appearance: none;  /*initially,we dont show it, to make visible,we need 'checked' in html or js*/
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transition: all 0.5s;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--secondary-color);
+}
+input[type="checkbox"]:checked::after  {
+  content: "\2714";
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 12px;
+}
+.strength-meter{
+  background-color: solid 1px #ffffff;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.strength-bar {
+  height: 100%;
+  width: 0;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 300px;
+  }
+  .button {
+    padding: 10px;
+  }
+}
